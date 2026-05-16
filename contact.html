@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="contact.title">Final Fast | İletişim</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <nav id="navbar">
+        <a href="/home.html" class="nav-logo">
+            <div class="nav-logo-icon">🚗</div>
+            <div>
+                <span class="nav-logo-text">FINAL FAST</span>
+                <span class="nav-logo-sub" data-i18n="nav.sub">Scented Cleaner Polish</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/home.html" data-i18n="nav.home">Ana Sayfa</a></li>
+            <li><a href="/home.html#features" data-i18n="nav.features">Özellikler</a></li>
+            <li><a href="/products.html" data-i18n="nav.products">Ürünler</a></li>
+            <li><a href="/about.html" data-i18n="nav.about">Hakkımızda</a></li>
+            <li><a href="/contact.html" data-i18n="nav.contact">İletişim</a></li>
+        </ul>
+        <div style="display:flex;align-items:center;gap:16px">
+            <div class="custom-select" id="customSelect">
+                <div class="select-trigger">
+                    <img src="https://flagcdn.com/w20/tr.png" id="currentFlag">
+                    <span id="currentLangText">TR</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="custom-options">
+                    <div class="option" onclick="selectLang('tr', 'https://flagcdn.com/w20/tr.png', 'TR')">
+                        <img src="https://flagcdn.com/w20/tr.png"> TR
+                    </div>
+                    <div class="option" onclick="selectLang('en', 'https://flagcdn.com/w20/us.png', 'EN')">
+                        <img src="https://flagcdn.com/w20/us.png"> EN
+                    </div>
+                    <div class="option" onclick="selectLang('ar', 'https://flagcdn.com/w20/eg.png', 'AR')">
+                        <img src="https://flagcdn.com/w20/eg.png"> AR
+                    </div>
+                    <div class="option" onclick="selectLang('ru', 'https://flagcdn.com/w20/ru.png', 'RU')">
+                        <img src="https://flagcdn.com/w20/ru.png"> RU
+                    </div>
+                    <div class="option" onclick="selectLang('fr', 'https://flagcdn.com/w20/fr.png', 'FR')">
+                        <img src="https://flagcdn.com/w20/fr.png"> FR
+                    </div>
+                </div>
+            </div>
+            <button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="/home.html" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="/home.html#features" data-i18n="nav.features">Özellikler</a>
+        <a href="/products.html" data-i18n="nav.products">Ürünler</a>
+        <a href="/about.html" data-i18n="nav.about">Hakkımızda</a>
+        <a href="/contact.html" data-i18n="nav.contact">İletişim</a>
+    </div>
+
+    <section id="contact" class="contact-page-section">
+        <div class="contact-header reveal">
+            <p class="section-label" data-i18n="contact.label">İletişim</p>
+            <h2 class="section-title" data-i18n="contact.title">Bizimle<br>İletişime Geçin</h2>
+            <div class="gold-divider"></div>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4 data-i18n="contact.addr">Adres</h4>
+                        <p>Atatürk Mah. Sanayi Cad. No:42<br>Esenyurt, İstanbul, Türkiye</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4 data-i18n="contact.phone">Telefon</h4>
+                        <p>+90 212 000 00 00</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <h4 data-i18n="contact.email">E-posta</h4>
+                        <p>info@finalfast.com.tr</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <div>
+                        <h4 data-i18n="contact.hours">Çalışma Saatleri</h4>
+                        <p data-i18n="contact.hoursval">Pazartesi – Cuma: 09:00 – 18:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper reveal" style="transition-delay:0.2s">
+                <form id="ffContactForm" onsubmit="handleFormSubmit(event)" class="contact-form">
+                    <div class="form-group">
+                        <label data-i18n="form.name">Ad Soyad</label>
+                        <input type="text" id="formName" required placeholder="Adınızı girin" />
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form.email">E-posta</label>
+                        <input type="email" id="formEmail" required placeholder="E-posta adresiniz" />
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form.subject">Konu</label>
+                        <div class="select-wrapper">
+                            <select id="formSubject">
+                                <option data-i18n="form.opt1">Ürün Bilgisi</option>
+                                <option data-i18n="form.opt2">Bayilik</option>
+                                <option data-i18n="form.opt3">Teknik Destek</option>
+                                <option data-i18n="form.opt4">Diğer</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form.msg">Mesaj</label>
+                        <textarea id="formMessage" required placeholder="Mesajınızı yazın..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary-submit">
+                        <span data-i18n="form.send">Gönder</span>
+                    </button>
+                </form>
+                <div id="formSuccessMessage" class="success-toast">
+                    ✨ Mesajınız başarıyla gönderildi! / Your message has been sent!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo" style="text-decoration:none;display:flex;align-items:center;gap:12px">
+                    <div class="nav-logo-icon">🚗</div>
+                    <span class="nav-logo-text">FINAL FAST</span>
+                </div>
+                <p data-i18n="footer.desc">Türkiye'nin lider araç bakım ürünleri markası. Kalite ve yenilikle aracınıza en iyi bakımı sunuyoruz.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-btn">📘</a>
+                    <a href="#" class="social-btn">📸</a>
+                    <a href="#" class="social-btn">💬</a>
+                    <a href="#" class="social-btn">🐦</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.pages">Sayfalar</h4>
+                <ul>
+                    <li><a href="/home.html" data-i18n="nav.home">Ana Sayfa</a></li>
+                    <li><a href="/features.html" data-i18n="nav.features">Özellikler</a></li>
+                    <li><a href="/products.html" data-i18n="nav.products">Ürünler</a></li>
+                    <li><a href="/about.html" data-i18n="nav.about">Hakkımızda</a></li>
+                    <li><a href="/contact.html" data-i18n="nav.contact">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.products">Ürünler</h4>
+                <ul>
+                    <li><a href="/products.html">Interior Polish Pro</a></li>
+                    <li><a href="/products.html">Exterior Deep Cleaner</a></li>
+                    <li><a href="/products.html">Diamond Wax Shield</a></li>
+                    <li><a href="/products.html">Scented Fresh Cleaner</a></li>
+                    <li><a href="/products.html">Crystal Glass Polish</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact">İletişim</h4>
+                <ul>
+                    <li><a href="#">İstanbul, Türkiye</a></li>
+                    <li><a href="#">+90 212 000 00 00</a></li>
+                    <li><a href="#">info@finalfast.com.tr</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Final Fast. <span data-i18n="footer.rights">Tüm hakları saklıdır.</span></p>
+            <p data-i18n="footer.made">Türkiye'de üretilmiştir 🇹🇷</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

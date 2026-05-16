@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="about.title">Final Fast | Hakkımızda</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <nav id="navbar">
+        <a href="/home.html" class="nav-logo">
+            <div class="nav-logo-icon">🚗</div>
+            <div>
+                <span class="nav-logo-text">FINAL FAST</span>
+                <span class="nav-logo-sub" data-i18n="nav.sub">Scented Cleaner Polish</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/home.html" data-i18n="nav.home">Ana Sayfa</a></li>
+            <li><a href="/features.html" data-i18n="nav.features">Özellikler</a></li>
+            <li><a href="/products.html" data-i18n="nav.products">Ürünler</a></li>
+            <li><a href="/about.html" data-i18n="nav.about">Hakkımızda</a></li>
+            <li><a href="/contact.html" data-i18n="nav.contact">İletişim</a></li>
+        </ul>
+        <div style="display:flex;align-items:center;gap:16px">
+            <div class="custom-select" id="customSelect">
+                <div class="select-trigger">
+                    <img src="https://flagcdn.com/w20/tr.png" id="currentFlag">
+                    <span id="currentLangText">TR</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="custom-options">
+                    <div class="option" onclick="selectLang('tr', 'https://flagcdn.com/w20/tr.png', 'TR')">
+                        <img src="https://flagcdn.com/w20/tr.png"> TR
+                    </div>
+                    <div class="option" onclick="selectLang('en', 'https://flagcdn.com/w20/us.png', 'EN')">
+                        <img src="https://flagcdn.com/w20/us.png"> EN
+                    </div>
+                    <div class="option" onclick="selectLang('ar', 'https://flagcdn.com/w20/eg.png', 'AR')">
+                        <img src="https://flagcdn.com/w20/eg.png"> AR
+                    </div>
+                    <div class="option" onclick="selectLang('ru', 'https://flagcdn.com/w20/ru.png', 'RU')">
+                        <img src="https://flagcdn.com/w20/ru.png"> RU
+                    </div>
+                    <div class="option" onclick="selectLang('fr', 'https://flagcdn.com/w20/fr.png', 'FR')">
+                        <img src="https://flagcdn.com/w20/fr.png"> FR
+                    </div>
+                </div>
+            </div>
+            <button class="nav-hamburger" id="hamburger" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="/home.html" data-i18n="nav.home">Ana Sayfa</a>
+        <a href="/features.html" data-i18n="nav.features">Özellikler</a>
+        <a href="/products.html" data-i18n="nav.products">Ürünler</a>
+        <a href="/about.html" data-i18n="nav.about">Hakkımızda</a>
+        <a href="/contact.html" data-i18n="nav.contact">İletişim</a>
+    </div>
+
+    <section class="about-hero">
+        <div class="hero-content">
+            <span class="label" data-i18n="about.label">Hakkımızda</span>
+            <h1 data-i18n="about.title">Araç Bakımında Türkiye'nin Öncüsü</h1>
+            <p data-i18n="about.desc">Final Fast, 2021 yılında İstanbul'da kurulmuş olup, otomotiv bakım sektöründe yenilikçi teknolojiler ve premium kalitede ürünler üreten öncü bir markadır. Aracınızın parlaklığını ve değerini korumak için tutkuyla çalışıyoruz.</p>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="https://res.cloudinary.com/dhoam6tdn/image/upload/v1778961675/otfltyq92xxhkzret3sw.png" alt="Final Fast Premium HQ Facility">
+        </div>
+    </section>
+
+    <section class="vision-mission">
+        <div class="box reveal">
+            <div class="box-icon">👁️</div>
+            <h3 data-i18n="about.vision">Vizyonumuz</h3>
+            <p data-i18n="about.vision_text">Küresel standartlarda, çevre dostu ve en son teknolojiye sahip araç bakım formülleri geliştirerek dünya çapında tanınan lider bir marka olmak.</p>
+        </div>
+        <div class="box reveal">
+            <div class="box-icon">🎯</div>
+            <h3 data-i18n="about.mission">Misyonumuz</h3>
+            <p data-i18n="about.mission_text">Müşterilerimize araçlarını ilk günkü ihtişamına kavuşturacak en güvenilir, yüksek performanslı ve kullanımı kolay temizlik ve cila çözümlerini sunmak.</p>
+        </div>
+    </section>
+
+    <section class="features-list-section">
+        <div class="section-title-center">
+            <h2 data-i18n="about.why_us">Neden Final Fast?</h2>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card reveal">
+                <div class="stat-number">ISO</div>
+                <p data-i18n="about.li1">ISO sertifikalı üretim tesisi</p>
+            </div>
+            <div class="stat-card reveal">
+                <div class="stat-number">R&D</div>
+                <p data-i18n="about.li2">Araştırma ve geliştirme odaklı</p>
+            </div>
+            <div class="stat-card reveal">
+                <div class="stat-number">500+</div>
+                <p data-i18n="about.li3">500'den fazla bayii</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo" style="text-decoration:none;display:flex;align-items:center;gap:12px">
+                    <div class="nav-logo-icon">🚗</div>
+                    <span class="nav-logo-text">FINAL FAST</span>
+                </div>
+                <p data-i18n="footer.desc">Türkiye'nin lider araç bakım ürünleri markası. Kalite og yenilikle aracınıza en iyi bakımı sunuyoruz.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-btn">📘</a>
+                    <a href="#" class="social-btn">📸</a>
+                    <a href="#" class="social-btn">💬</a>
+                    <a href="#" class="social-btn">🐦</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.pages">Sayfalar</h4>
+                <ul>
+                    <li><a href="/home.html" data-i18n="nav.home">Ana Sayfa</a></li>
+                    <li><a href="#features" data-i18n="nav.features">Özellikler</a></li>
+                    <li><a href="/products.html" data-i18n="nav.products">Ürünler</a></li>
+                    <li><a href="/about.html" data-i18n="nav.about">Hakkımızda</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.products">Ürünler</h4>
+                <ul>
+                    <li><a href="/products.html">Interior Polish Pro</a></li>
+                    <li><a href="/products.html">Exterior Deep Cleaner</a></li>
+                    <li><a href="/products.html">Diamond Wax Shield</a></li>
+                    <li><a href="/products.html">Scented Fresh Cleaner</a></li>
+                    <li><a href="/products.html">Crystal Glass Polish</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact">İletişim</h4>
+                <ul>
+                    <li><a href="#">İstanbul, Türkiye</a></li>
+                    <li><a href="#">+90 212 000 00 00</a></li>
+                    <li><a href="#">info@finalfast.com.tr</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Final Fast. <span data-i18n="footer.rights">Tüm hakları saklıdır.</span></p>
+            <p data-i18n="footer.made">Türkiye'de üretilmiştir 🇹🇷</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>
