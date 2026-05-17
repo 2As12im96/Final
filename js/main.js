@@ -254,11 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal, .feature-card, .product-card').forEach(el => observer.observe(el));
 });
 
-
-
-
-
-// const translations = {
 //     tr: {
 //         "nav.home":"Ana Sayfa","nav.features":"Özellikler","nav.products":"Ürünler","nav.about":"Hakkımızda","nav.contact":"İletişim","nav.sub":"Scented Cleaner Polish",
 //         "hero.badge":"Türkiye'nin #1 Araç Bakım Markası","hero.desc":"Aracınızı profesyonel bakım ürünlerimizle mükemmel parlaklığa kavuşturun. Kokulu temizleyici ve cila formülümüzle fark yaratın.","hero.cta1":"Ürünleri Keşfet","hero.cta2":"Hakkımızda","hero.scroll":"Keşfet",
